@@ -27,6 +27,7 @@ const inspectSpinner = document.getElementById("inspectSpinner");
 
 const sampleFernBtn = document.getElementById("sampleFernBtn");
 const sampleLichenBtn = document.getElementById("sampleLichenBtn");
+const sampleMushroomBtn = document.getElementById("sampleMushroomBtn");
 
 const lookCloserText = document.getElementById("lookCloserText");
 const touchFeelText = document.getElementById("touchFeelText");
@@ -88,6 +89,7 @@ function setupEventHandlers() {
   // Sample Chips
   sampleFernBtn.addEventListener("click", () => selectSample("sample_fern"));
   sampleLichenBtn.addEventListener("click", () => selectSample("sample_lichen"));
+  sampleMushroomBtn.addEventListener("click", () => selectSample("sample_mushroom"));
 
   // Inspect Action
   inspectBtn.addEventListener("click", runInspection);

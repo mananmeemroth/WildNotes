@@ -145,6 +145,22 @@ DEMO_SENSORY_OBSERVATIONS = [
             "### MINDFUL PAUSE\n"
             "Let your gaze soften. Feel your feet firmly planted on the earth beneath you."
         )
+    },
+    {
+        "title": "Twin Bonnet Mushrooms & Velvet Moss",
+        "type": "Fungi & Mycelium",
+        "analysis": (
+            "### WHAT WE NOTICE TOGETHER\n"
+            "Two delicate bonnet mushrooms standing tall amidst a bed of emerald velvet moss.\n\n"
+            "### 3 SENSORY CHALLENGES (TOUCH GRASS)\n"
+            "- 🔎 **Look Closer**: Gaze under the cap to see the razor-thin radiating gills and the gentle morning light shining through.\n"
+            "- ✋ **Touch & Feel**: Very gently touch the moss cushion around the base — notice how spongy and water-rich it feels.\n"
+            "- 👃 **Scent & Surroundings**: Inhale near the forest floor; catch that distinctive earthy mushroom and composting leaf fragrance.\n\n"
+            "### FIELD INQUIRY\n"
+            "How does the underground mycelial network connect these mushrooms to the towering trees above them?\n\n"
+            "### MINDFUL PAUSE\n"
+            "Breathe in the quiet patience of the forest. The smallest beings often carry the greatest wonders."
+        )
     }
 ]
 
@@ -331,9 +347,14 @@ async def inspect_specimen(
 
     # 3. Fallback: Curated Naturalist Insight (Ensures 100% zero-crash experience on deployed sites)
     if not result_text:
-        demo_pick = DEMO_SENSORY_OBSERVATIONS[0] if (sample_id and "fern" in sample_id) else (
-            DEMO_SENSORY_OBSERVATIONS[1] if (sample_id and "lichen" in sample_id) else random.choice(DEMO_SENSORY_OBSERVATIONS)
-        )
+        if sample_id and "fern" in sample_id:
+            demo_pick = DEMO_SENSORY_OBSERVATIONS[0]
+        elif sample_id and "lichen" in sample_id:
+            demo_pick = DEMO_SENSORY_OBSERVATIONS[1]
+        elif sample_id and "mushroom" in sample_id:
+            demo_pick = DEMO_SENSORY_OBSERVATIONS[2]
+        else:
+            demo_pick = random.choice(DEMO_SENSORY_OBSERVATIONS)
         result_text = demo_pick["analysis"]
         engine_used = "curated_naturalist"
 

@@ -1,5 +1,25 @@
 [
   {
+    "id": "specimen-1791638671121",
+    "timestamp": "2026-10-10 18:54",
+    "title": "Living Wonder",
+    "specimen_type": "Botanical Wonder",
+    "notes": "\nThe image features a small green plant with a spiral pattern on its leaves, surrounded by water droplets. The droplets are scattered across the plant, giving it a dewy appearance. The plant is situated in a dark and muddy area, which adds to the overall atmosphere of the scene.",
+    "sensory_data": {
+      "engine": "local_ollama"
+    }
+  },
+  {
+    "id": "specimen-1791638629699",
+    "timestamp": "2026-10-10 18:53",
+    "title": "Living Wonder",
+    "specimen_type": "Botanical Wonder",
+    "notes": "\nThe image features a small, young fern plant with a large, green, dew-covered leaf. The fern is situated in a dark, muddy area, surrounded by a bed of leaves and twigs. The plant is the main subject of the image, with the surrounding environment emphasizing its natural, outdoor setting.\n\nThe fern is surrounded by various other plants and twigs, which are also part of the same muddy bed. The overall scene is a close-up of the fern, capturing its details and the unique characteristics of the plant.",
+    "sensory_data": {
+      "engine": "local_ollama"
+    }
+  },
+  {
     "id": "specimen-1791637510907",
     "timestamp": "2026-10-10 18:35",
     "title": "Living Wonder",

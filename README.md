@@ -1,12 +1,18 @@
-# 🌿 Verdant WildNotes
+# 🌿 WildNotes
 
 > **Observation that grows with you.**  
 > *The offline, mindful outdoor naturalist companion designed to get you off the sterile screen and into physical contact with the living earth.*
 
-[![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
-[![Ollama](https://img.shields.io/badge/Local_AI-Ollama_%28moondream%29-10b981?style=flat-square)](https://ollama.com)
-[![Docker](https://img.shields.io/badge/Deployment-Docker_Ready-2496ED?style=flat-square&logo=docker&logoColor=white)](https://docker.com)
-[![License](https://img.shields.io/badge/License-MIT-a3e635?style=flat-square)](LICENSE)
+<p align="center">
+  <img src="static/images/verdant_bg.jpg" alt="WildNotes Banner" width="100%" style="border-radius: 14px; box-shadow: 0 10px 40px rgba(0,0,0,0.6);" />
+</p>
+
+<p align="center">
+  <a href="https://hacktoberfest.com"><img src="https://img.shields.io/badge/Hacktoberfest-2026-ff7a00?style=for-the-badge&logo=hacktoberfest&logoColor=white" alt="Hacktoberfest 2026" /></a>
+  <a href="https://fastapi.tiangolo.com"><img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" /></a>
+  <a href="https://ollama.com"><img src="https://img.shields.io/badge/Ollama-moondream-10b981?style=for-the-badge" alt="Ollama" /></a>
+  <a href="https://docker.com"><img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" /></a>
+</p>
 
 ---
 
@@ -22,6 +28,13 @@ Instead of encyclopedic lectures, WildNotes acts as an empathetic field guide:
 3. **👃 Scent & Surroundings**: Prompts you to breathe in the petrichor, wood tannins, and companion organisms.
 4. **🧘 Mindful Pause**: Reminds you to take three slow breaths and ground yourself in the moment.
 
+<p align="center">
+  <img src="static/images/sample_fern.jpg" alt="Spiral Fiddlehead Fern" width="31%" style="border-radius: 12px; margin-right: 1.5%; box-shadow: 0 8px 24px rgba(0,0,0,0.4);" />
+  <img src="static/images/sample_lichen.jpg" alt="Golden Oak Lichen" width="31%" style="border-radius: 12px; margin-right: 1.5%; box-shadow: 0 8px 24px rgba(0,0,0,0.4);" />
+  <img src="static/images/sample_mushroom.jpg" alt="Moss Bonnet Mushrooms" width="31%" style="border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.4);" />
+</p>
+<p align="center"><em>Real trail curiosities (Fern, Lichen, Mushrooms) processed by the on-device vision model, generating tactile micro-challenges.</em></p>
+
 ---
 
 ## ✨ Features
@@ -35,6 +48,18 @@ Instead of encyclopedic lectures, WildNotes acts as an empathetic field guide:
 - **🔊 Procedural Forest Soundscape**: An interactive ambient audio generator synthesizing gentle forest breeze and birdsong via the Web Audio API without needing external audio files.
 - **📓 Personal Trail Chronicle**: Automatically records discoveries into a local journal with one-click **Markdown Export** for field researchers and hikers.
 - **🛡️ Zero-Crash Cloud Fallback**: Automatically adapts if deployed in environments without local Ollama, ensuring 100% uptime and demo readiness.
+
+---
+
+## 🎃 Hacktoberfest 2026
+
+WildNotes is proudly participating in **Hacktoberfest 2026**! 🎉
+
+We welcome contributions from developers, outdoor enthusiasts, and designers of all experience levels:
+- 🌿 **Sensory Prompt Engineering**: Enhance tactile observation challenges and mindful field questions.
+- 📸 **Specimen Assets**: Submit high-resolution macro photography of mosses, fungi, lichens, and plants.
+- 🔊 **Audio Biomes**: Add new procedural soundscapes (coastal rain, high mountain wind, stream babble).
+- 📱 **Mobile & PWA**: Help refine the touch experience for offline field expeditions.
 
 ---
 
