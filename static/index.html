@@ -147,16 +147,19 @@
           <!-- Drag and Drop View -->
           <div class="dropzone-view" id="dropzoneView">
             <div class="dropzone-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                 <polyline points="17 8 12 3 7 8"/>
                 <line x1="12" y1="3" x2="12" y2="15"/>
               </svg>
             </div>
             <div>
-              <p class="dropzone-text"><strong>Drop an outdoor photo here</strong> or tap to browse</p>
-              <p class="dropzone-subtext">Leaves, moss, bark, stones, lichens, feathers</p>
+              <p class="dropzone-text"><strong>Drag & Drop outdoor photo here</strong></p>
+              <p class="dropzone-subtext">Leaves, moss, bark, stones, lichens, fungi</p>
             </div>
+            <button type="button" class="btn-browse-file" id="browseFileBtn">
+              📁 Choose Photo from Device
+            </button>
             <input type="file" id="fileInput" accept="image/*" style="display: none;">
           </div>
 
@@ -169,8 +172,16 @@
             <button class="btn-shutter" id="shutterBtn" title="Capture Specimen"></button>
           </div>
 
-          <!-- Selected Image Preview -->
-          <img id="previewImg" class="preview-img" alt="Captured Outdoor Specimen">
+          <!-- Selected Image Preview Container -->
+          <div class="preview-container" id="previewContainer" style="display: none;">
+            <img id="previewImg" class="preview-img" alt="Captured Outdoor Specimen">
+            <div class="preview-overlay-bar">
+              <span class="preview-badge" id="previewSourceBadge">Photo Ready</span>
+              <button type="button" class="btn-clear-photo" id="clearPhotoBtn">
+                ✕ Change / Remove
+              </button>
+            </div>
+          </div>
         </div>
 
         <!-- Quick Sample Chips for Immediate Testing -->

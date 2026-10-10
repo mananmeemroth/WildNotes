@@ -28,6 +28,10 @@ const inspectSpinner = document.getElementById("inspectSpinner");
 const sampleFernBtn = document.getElementById("sampleFernBtn");
 const sampleLichenBtn = document.getElementById("sampleLichenBtn");
 const sampleMushroomBtn = document.getElementById("sampleMushroomBtn");
+const browseFileBtn = document.getElementById("browseFileBtn");
+const previewContainer = document.getElementById("previewContainer");
+const previewSourceBadge = document.getElementById("previewSourceBadge");
+const clearPhotoBtn = document.getElementById("clearPhotoBtn");
 
 const lookCloserText = document.getElementById("lookCloserText");
 const touchFeelText = document.getElementById("touchFeelText");
@@ -54,8 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   checkSystemStatus();
   fetchJournal();
   setupEventHandlers();
-  // Pre-load fern sample as default preview for immediate aesthetic wow factor
-  selectSample("sample_fern", false);
+  // Keep the photo upload dropzone active and ready by default
 });
 
 function setupEventHandlers() {
@@ -64,7 +67,22 @@ function setupEventHandlers() {
   tabCamera.addEventListener("click", () => switchTab("camera"));
 
   // File Upload
-  dropzoneView.addEventListener("click", () => fileInput.click());
+  dropzoneView.addEventListener("click", (e) => {
+    // Only open if clicking dropzone itself or browse button
+    fileInput.click();
+  });
+  if (browseFileBtn) {
+    browseFileBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      fileInput.click();
+    });
+  }
+  if (clearPhotoBtn) {
+    clearPhotoBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      clearSelectedPhoto();
+    });
+  }
   fileInput.addEventListener("change", handleFileSelect);
 
   // Drag and drop
@@ -140,20 +158,30 @@ function switchTab(mode) {
     stopCamera();
     cameraView.style.display = "none";
     if (activeImagePayload && previewImg.src) {
-      previewImg.style.display = "block";
+      previewContainer.style.display = "block";
       dropzoneView.style.display = "none";
     } else {
       dropzoneView.style.display = "flex";
-      previewImg.style.display = "none";
+      previewContainer.style.display = "none";
     }
   } else if (mode === "camera") {
     tabCamera.classList.add("active");
     tabUpload.classList.remove("active");
     dropzoneView.style.display = "none";
-    previewImg.style.display = "none";
+    previewContainer.style.display = "none";
     cameraView.style.display = "block";
     startCamera();
   }
+}
+
+function clearSelectedPhoto() {
+  activeImagePayload = null;
+  fileInput.value = "";
+  previewImg.src = "";
+  previewContainer.style.display = "none";
+  dropzoneView.style.display = "flex";
+  cameraView.style.display = "none";
+  showToast("Photo cleared. Upload or snap another specimen!");
 }
 
 async function startCamera() {
@@ -186,12 +214,13 @@ function captureCameraPhoto() {
 
   activeImagePayload = { type: "base64", data: dataUrl };
   previewImg.src = dataUrl;
-  previewImg.style.display = "block";
+  previewContainer.style.display = "block";
+  if (previewSourceBadge) previewSourceBadge.textContent = "Camera Photo";
   cameraView.style.display = "none";
   stopCamera();
   tabCamera.classList.remove("active");
   tabUpload.classList.add("active");
-  showToast("📸 Specimen snapped! Ready to inspect.");
+  showToast("📸 Photo captured! Ready to inspect.");
 }
 
 function handleFileSelect(e) {
@@ -205,7 +234,8 @@ function handleImageFile(file) {
   const reader = new FileReader();
   reader.onload = (e) => {
     previewImg.src = e.target.result;
-    previewImg.style.display = "block";
+    previewContainer.style.display = "block";
+    if (previewSourceBadge) previewSourceBadge.textContent = "Uploaded Photo";
     dropzoneView.style.display = "none";
     showToast(`🌿 Loaded: ${file.name}`);
   };
@@ -215,13 +245,14 @@ function handleImageFile(file) {
 function selectSample(sampleId, notify = true) {
   activeImagePayload = { type: "sample", id: sampleId };
   previewImg.src = `/static/images/${sampleId}.jpg`;
-  previewImg.style.display = "block";
+  previewContainer.style.display = "block";
+  if (previewSourceBadge) previewSourceBadge.textContent = "Sample Specimen";
   dropzoneView.style.display = "none";
   stopCamera();
   tabCamera.classList.remove("active");
   tabUpload.classList.add("active");
   if (notify) {
-    showToast(`🌱 Sample specimen selected (${sampleId.replace("sample_", "")})`);
+    showToast(`🌱 Sample curiosity selected`);
   }
 }
 
