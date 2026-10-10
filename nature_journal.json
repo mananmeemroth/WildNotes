@@ -1,0 +1,48 @@
+[
+  {
+    "id": "specimen-1791637510907",
+    "timestamp": "2026-10-10 18:35",
+    "title": "Living Wonder",
+    "specimen_type": "Botanical Wonder",
+    "notes": "\nThe image features a close-up view of a tree trunk, with a variety of green and yellow lichen growing on it. The lichen is covering the entire surface of the tree, creating a beautiful contrast between the natural tree and the vibrant colors of the lichen. The tree trunk is dark brown, and the lichen is predominantly green and yellow in color. The close-up perspective of the image allows for a detailed view of the lichen and the intricate patterns it creates on the tree trunk.",
+    "sensory_data": {
+      "engine": "local_ollama"
+    }
+  },
+  {
+    "id": "specimen-1791637459537",
+    "timestamp": "2026-10-10 18:34",
+    "title": "Living Wonder",
+    "specimen_type": "Botanical Wonder",
+    "notes": "\nThe image features a small green plant with water droplets on its leaves, which are likely the result of dew or morning mist. The plant is situated on a bed of dirt, surrounded by a forest-like setting. The close-up view of the plant and its surroundings highlights the intricate details of the plant's leaves and the natural environment it is growing in.",
+    "sensory_data": {
+      "engine": "local_ollama"
+    }
+  },
+  {
+    "id": "specimen-1791637051035",
+    "timestamp": "2026-10-10 18:27",
+    "title": "Wild Discovery",
+    "specimen_type": "Plant / Botanical",
+    "notes": "\nThe image features a beautiful orange and black butterfly flying over a flower garden. The butterfly is positioned in the middle of the scene, with the flower garden surrounding it. The garden is filled with bright yellow flowers, which add a vibrant touch to the scene. The butterfly is captured in mid-flight, showcasing its grace and elegance as it soars through the air.",
+    "sensory_data": {
+      "model_used": "moondream",
+      "has_image": true
+    }
+  },
+  {
+    "id": "specimen-1791636733273",
+    "timestamp": "2026-10-10 18:22",
+    "title": "Wild Discovery",
+    "specimen_type": "Plant / Botanical",
+    "notes": "\nThe image features a small green plant with a large, spiral-shaped leaf at the center. The leaf is covered in water droplets, giving it a shiny appearance. The plant is situated in a dark, muddy area, which adds to the overall sense of mystery and intrigue. The water droplets on the leaf are scattered across its surface, creating a visually striking effect.",
+    "sensory_data": {
+      "model_used": "moondream",
+      "has_image": true
+    }
+  },
+  {
+    "timestamp": "2026-10-10 18:10",
+    "notes": " The image features a beautiful orange and black butterfly with its wings spread wide, flying over a group of bright ora"
+  }
+]

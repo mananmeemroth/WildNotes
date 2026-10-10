@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Environment Variables
+.env
+
+# Gradio / IDE
+.gradio/
+.vscode/
+.idea/
+.DS_Store
+
+# Node (legacy)
+node_modules/
+npm-debug.log*
+
+# Temp
+temp_capture.jpg

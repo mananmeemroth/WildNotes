@@ -1,0 +1,12 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.env
+.git
+.gitignore
+.gradio
+node_modules
+npm-debug.log
+temp_capture.jpg
+.DS_Store
